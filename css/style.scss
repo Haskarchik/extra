@@ -74,20 +74,72 @@ h1, h2, h3, h4, h5, h6 {
 
 /************************************/
 
+
+@keyframes slide {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes slide-product {
+  0%{
+    left: 700px;
+    opacity: 0;
+  }
+  100%{
+    left: 455px;
+    opacity: 1;
+  }
+}
+
+@keyframes first-part-img{
+  0%{
+    opacity: 0.1;
+    left: 500px;
+  }
+}
+@keyframes second-part-img {
+  0%{
+    opacity: 0.1;
+    left: 500px
+  }
+}
+@keyframes advertising-down-img {
+  0%{
+    opacity: 0.1;
+    left: 270px;
+  }
+  100%{
+    opacity: 1;
+    left: 58%;
+  }
+}
+
+
+/************************************/
+
 body{
   background-image: url(../img/Screenshot_1.png);
 }
 .header{
-  position: sticky;
+  
+  position: fixed;
+  width: 100%;
   top: -10px;
-  z-index: 5;
+  z-index: 12;
   background-color: white;
   margin-bottom: 10px;
 
 }
-.wrapper {
-    max-width: 1440px;
+.container {
+  
+    max-width: 1620px;
     margin: auto;
+    padding: 0px 10px;
+    
 }
 .header-row {
 
@@ -95,9 +147,9 @@ body{
     font-family: 'M PLUS 1 Code', sans-serif;
     font-size: 30px;
     font-weight: 500;
-    padding: 10px 0px 5px 0px;
+    padding: 10px 0px 0px 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 .header-img {
@@ -106,6 +158,13 @@ body{
     max-height: 100px;
 
 }
+}
+.header__burger {
+  background-image: url(../Ishodnik/premium-icon-menu-4436689.png);
+	display: block;
+  height: 40px;
+  width: 40px;
+  background-size: contain;
 }
 .header-nav {
     
@@ -120,41 +179,17 @@ body{
         }
     }
 }
-.search-blok{
-  display: flex;
 
-}
-.search{
-
-  background-color: rgba(128, 128, 128, 0.226);
-  width: 300px;
-  padding: 20px  20px;
-  border: solid 0.1px #8D8D8D;
-  height: 30px;
-  border-bottom-left-radius : 10px;
-  border-top-left-radius : 10px;
-}
-  .search-batton{
-    text-align: center;
-    font-size: 25px;
-    line-height: 33.5px;
-  background-color: #7AB344;
-  color: white;
-  text-decoration: none;
-  padding: 3px 5px ;
-  border-bottom-right-radius : 10px;
-  border-top-right-radius : 10px;
-  }
 
 /************************************/
 
 .advertising {
+  margin-top: 110px;
   margin-bottom: 100px;
+  
 }
-.conatiner {
-  box-shadow: 0px 0px 120px black;
-  max-width: 1640px;
-  margin: auto;
+.advertising-container {
+  box-shadow: 0px 0px 120px rgb(59, 59, 59);
   overflow: hidden;
 }
 .advertising-up {
@@ -162,27 +197,46 @@ margin-bottom: 10px;
 
 }
 .advertising-down{
-  
-  height: 400px;
-  background-image: url(../Ishodnik/sale4.jpg);
+  position: relative;
+  img{
+    padding-left: 50px;
+    position: relative;
+    top: -140px;
+    left: 58%;
+    z-index:3;
+    max-height: 650px;
+    max-width: 600px;
+    animation-name: advertising-down-img;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+  }
+  max-width: 1600px;
+  max-height: 400px;
+  background-image: url(../img/sale4.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   background-position: 0 0;
 }
+.more-button3 {
+  position: relative;
+  top: 90px;
+  
+ }
+
 .up-row {
   display: flex;  
   
   
 }
 .up-slider {
- 
- 
-  
+  position: relative;
   min-width: 0;
   
 }
+
+
 .swiper {
-  width: 900px;
+  max-width: 860px;
   height: 600px;
   
 }
@@ -192,57 +246,139 @@ margin-bottom: 10px;
 .swiper-slide {
   
 }
-.swiper-slide1{
-  background-image: url(../Ishodnik/bath2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-
+@mixin swiperSlide(){ 
+  img{
+      position: absolute;
+      left:455px;
+      top: 120px;
+      max-height: 470px;
+      max-width: 360px;
+      z-index: 3;
+      animation-name:  slide-product;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      }
 }
-.swiper-slide2{
- background-image: url(../Ishodnik/kitchen-3.jpg);
+
+
+.swiper-slide-active{
+  animation-name: slide;
+  animation-duration: 1.15s;
+  animation-timing-function: linear;
+}
+.swiper-slide1{
+
+  background-image: url(../img/window.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  
+    @include swiperSlide();
+  
+}
+
+.swiper-slide2{
+  background-image: url(../img/toilet.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  @include swiperSlide();
 }
 .swiper-slide3{
-  background-image: url(../Ishodnik/dishes3.jpg);
-  background-size: cover;
+  
+  background-image: url(../img/kitchen-3.jpg);
+  background-size: 100% 100%;
   background-repeat: no-repeat;
+  @include swiperSlide();
 }
 
 .swiper-button-next:after, .swiper-button-prev:after {display: none;
 }
 .swiper-button-next{
-background-image: url(../Ishodnik/Rightarrow.svg);
+background-image: url(../img/Rightarrow.svg);
 background-repeat: no-repeat;
+background-size: 100% 100%;
+background-color: aliceblue;
+border-radius: 50%;
+
 } 
 
 .swiper-button-prev{
-background-image: url(../Ishodnik/Leftarrow.svg);
+  background-color: aliceblue;
+  border-radius: 50%;
+  width: calc(var(--swiper-navigation-size)/ 44 * 44);
+background-image: url(../img/Leftarrow.svg);
 background-repeat: no-repeat;
+background-size: 100% 100%;
 }
 .up-column {
-margin-left: 10px;
+
   display: flex;
- flex-direction: column;}
+  flex-direction: column;}
+ .more-button {
+  position: relative;
+  top: 70px;
+  left: 590px;
+ }
+
+ .more-button2 {
+  position: relative;
+  top: 70px;
+  
+ }
+
+
+ .more-style{
+
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 140px;
+  font-weight: 700;
+  font-size: 23px;
+  color: rgb(255, 145, 0);
+  text-decoration: none;
+
+ }
 .first-part {
+  position: relative;
   margin-left: 10px;
   margin-bottom: 10px;
   height: 295px;
   width: 730px;
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-image: url(../Ishodnik/green2.jpg);
+  background-image: url(../img/труби.jpg);
+    
+  }
   
+.first-part-img{
+  animation-name: first-part-img;
+  animation-duration: 3.5s;
+  position: relative;
+  top: -80px;
+  left: -50px;
+  height: 375px;
+  width: 350px;
 }
 .second-part {
-  background-image: url(../Ishodnik/Soap-pad2.jpg);
+  position: relative;
+  background-image: url(../img/Soap-pad2.jpg);
   margin-left: 10px;
   height: 295px;
   width: 730px;
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-
+.second-part-img{
+  animation-name: second-part-img;
+  animation-duration: 3.5s;
+  position: relative;
+  top: -110px;
+  left: 350px;
+  height: 450px;
+  width: 400px;
+}
 
 
 /************************************/
@@ -259,12 +395,14 @@ margin-left: 10px;
 }
 .journal-pad {
   
-  display: flex;
+
 }
 .journal-column {
-  
+  justify-content: center;
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  
 
 
 }
@@ -272,13 +410,23 @@ margin-left: 10px;
   max-width: 350px;
   margin: auto;
   margin: 30px 50px;
-  background-color: white;
+  background-color: rgb(223, 252, 185);
   border-radius: 15px;
   box-shadow: 0px 0px 10px rgb(202, 247, 202);
-  
+
   padding: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
+  opacity: 0.1;
+
+  transition: all 0.9s ease 0s ;
+}
+.jurnal-card._active{
+  opacity: 1;
+  background-color: rgb(246, 252, 244);
+  
 }
 .card-label {
   font-size: 30px;
@@ -288,11 +436,12 @@ margin-left: 10px;
 
 }
 .card-img {
-  background-image: url(../img/krot.jpg);
+  
   background-size: 100% 100% ;
   background-repeat: no-repeat;
   border-radius: 30px;
-  height: 370px;
+  max-height: 370px;
+  max-width:320px ;
   margin-bottom: 15px;
 }
 .card-text {
@@ -302,7 +451,246 @@ margin-left: 10px;
   max-width: 310px;
 }
 /************************************/
+.footer {
+  padding: 10px;
+  padding-bottom: 3px;
+  font-size:15px;
+  text-align: center;
+  background-color: rgb(238, 238, 238);
+}
+.footer-container{
+  max-width: 900px;
+  margin: auto;
+}
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-column {
+  span{
+    font-size: 20px;
+  }
+  li{
+    :hover{
+      color: green;
+    }
+    font-size: 20px;
+    margin-bottom: 7px;
+  }
+  a{
+    
+    padding: bottom 10px;
+    color: black;
+    text-decoration: none;
+  }
+  display: flex;
+  flex-direction: column;
+}
+.footer-contact{
+  
+max-width: 300px;
 
+}
+.footer-end {
+   font-size: 15px;
+  
+}
 /************************************/
+@media (max-width:1440px) {
+  .swiper-slide1,.swiper-slide2,.swiper-slide3{
+    img{
+      left: 370px;
+    }
+  }
+  @keyframes slide-product {
+    0%{
+      left: 200px;
+      opacity: 0;
+    }
+    100%{
+      left: 370px;
+      opacity: 1;
+    }
+  }
+}
+@media (max-width:767px) {
+
+
+  .header-row{
+    margin: 0px 30px;
+    justify-content: space-between;
+  }
+  .header-nav{
+    display: none;
+  }
+  .header-burger {
+    transition: 0.3s;
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		z-index: 3;
+    background-image: url(../img/premium-icon-menu-4436689.png);
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+  
+   
+  }
+  .header-burger._active{
+    opacity: 0.5;
+   
+  }
+  .header-nav{
+    opacity: 0.2;
+    width: 100%;
+    height: 200px;
+    position: absolute;   
+    display: block;
+    left: -100%;
+    top: 110px;
+    transition: 1s;
+    li a{
+    color: yellow;
+    }
+    background-color: rgb(3, 109, 11);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+  }
+  .header-nav._active{
+    top: 110px;
+    left: 0;
+    opacity: 0.8;
+  }
+  .up-row{
+    flex-direction: column;
+
+  }
+  .jurnal-card{
+    margin: 10px;
+
+    max-width: 300px;
+    img{
+      max-width: 280px;
+    }
+  }
+}
+
+ @media (max-width:500px) {
+
+.container{
+   max-width: 420px;
+ }
+.header-img{
+  img{
+  max-height: 75px;
+ 
+}
+}
+ .header-nav{
+   display: none;
+  }
+  .swiper{
+
+   max-height: 300px;
+  }
+  .swiper-slide1, .swiper-slide2, .swiper-slide3{
+ img{height: 250px;
+  top: 60px;
+  left: 20px;
+    }
+  }
+@keyframes slide-product {
+  0%{
+    left: 100px;
+    opacity: 0;
+    }
+  100%{
+    left: 20px;
+    opacity: 1;
+    }
+  }
+  .advertising{
+    margin-top: 85px;
+    margin-bottom: 10px;
+  }
+  .first-part{
+    max-height: 200px;
+    margin: 10px 0px  10px 0px;
+    background-size: 60% 100%;
+    img{
+    top: -20px;
+    max-height: 250px;
+    max-width: 220px;
+    }
+  }
+  .second-part{
+    margin: 0px;
+    max-height: 200px;
+    background-size: 60% 100%;
+    img{
+      left: 10px;
+    top: -20px;
+    max-height: 250px;
+    max-width: 220px;
+    }
+  }
+  @keyframes second-part-img {
+    0%{
+      opacity: 0.1;
+      left: 200px
+    }
+  }
+  .more-style{
+    display: none;
+  }
+  .advertising-down{
+    max-height: 200px;
+    background-size: auto 100%;
+    img{
+      top: 20px;
+      left: 120px;
+    max-height: 250px;
+    max-width: 220px;
+    }
+  }
+  @keyframes advertising-down-img {
+    0%{
+      opacity: 0.1;
+      left: 270px;
+    }
+    100%{
+      opacity: 1;
+      left: 120px;
+    }
+  }
+  .journal-title{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .jurnal-card{
+    
+    width: 150px;
+    height: 250px;
+  }
+  .card-label{
+    padding:5px 5px 5px 20px ;
+    font-size: 20px;
+  }
+  .card-img{
+    max-height: 170px;
+    max-width: 10px;
+
+  }
+  .card-text{
+    display: none;
+    
+  }
+
+ }
 
 /************************************/
