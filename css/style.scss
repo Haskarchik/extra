@@ -197,13 +197,13 @@ margin-bottom: 10px;
 
 }
 .advertising-down{
-  position: relative;
+  
   img{
-    padding-left: 50px;
+    
     position: relative;
     top: -140px;
-    left: 58%;
-    z-index:3;
+    left: 57.5%;
+
     max-height: 650px;
     max-width: 600px;
     animation-name: advertising-down-img;
@@ -218,8 +218,8 @@ margin-bottom: 10px;
   background-position: 0 0;
 }
 .more-button3 {
-  position: relative;
-  top: 90px;
+  display: inline-block;
+ margin-top: 90px;
   
  }
 
@@ -314,15 +314,14 @@ background-size: 100% 100%;
   display: flex;
   flex-direction: column;}
  .more-button {
-  position: relative;
-  top: 70px;
-  left: 590px;
+ display: inline-block;
+ margin: 60px 0px 0px 80.9%;
  }
 
  .more-button2 {
-  position: relative;
-  top: 70px;
-  
+  display: inline-block;
+  margin-top: 60px;
+ 
  }
 
 
@@ -330,8 +329,7 @@ background-size: 100% 100%;
 
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px 15px;
-  display: flex;
-  align-items: center;
+  
   justify-content: center;
   max-width: 140px;
   font-weight: 700;
@@ -341,7 +339,7 @@ background-size: 100% 100%;
 
  }
 .first-part {
-  position: relative;
+
   margin-left: 10px;
   margin-bottom: 10px;
   height: 295px;
@@ -356,13 +354,14 @@ background-size: 100% 100%;
   animation-name: first-part-img;
   animation-duration: 3.5s;
   position: relative;
-  top: -80px;
-  left: -50px;
+  top: -140px;
+  left: 0px;
+  
   height: 375px;
   width: 350px;
 }
 .second-part {
-  position: relative;
+  
   background-image: url(../img/Soap-pad2.jpg);
   margin-left: 10px;
   height: 295px;
@@ -374,8 +373,8 @@ background-size: 100% 100%;
   animation-name: second-part-img;
   animation-duration: 3.5s;
   position: relative;
-  top: -110px;
-  left: 350px;
+  top: -70px;
+  left: 200px;
   height: 450px;
   width: 400px;
 }
@@ -460,41 +459,28 @@ background-size: 100% 100%;
   background-color: rgb(238, 238, 238);
 }
 .footer-container{
-  max-width: 900px;
+  max-width: 700px;
   margin: auto;
 }
 .footer-row {
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 5px;
 }
-.footer-column {
-  span{
-    font-size: 20px;
-  }
-  li{
-    :hover{
-      color: green;
-    }
-    font-size: 20px;
-    margin-bottom: 7px;
-  }
-  a{
-    
-    padding: bottom 10px;
-    color: black;
-    text-decoration: none;
-  }
-  display: flex;
-  flex-direction: column;
-}
-.footer-contact{
-  
-max-width: 300px;
 
+
+
+.footer-phone {
+}
+.footer-adress {
 }
 .footer-end {
-   font-size: 15px;
-  
+  padding: 5px;
+  font-size: 10px;
+  max-width: 100%;
+  border-top: solid 1px black;
 }
 /************************************/
 @media (max-width:1440px) {
@@ -514,7 +500,7 @@ max-width: 300px;
     }
   }
 }
-@media (max-width:767px) {
+@media (max-width:768px) {
 
 
   .header-row{
@@ -550,7 +536,7 @@ max-width: 300px;
     height: 200px;
     position: absolute;   
     display: block;
-    left: -100%;
+    left: 100%;
     top: 110px;
     transition: 1s;
     li a{
@@ -619,23 +605,30 @@ max-width: 300px;
     margin-top: 85px;
     margin-bottom: 10px;
   }
+  .more-button{
+
+    margin: 60px 0px 0px 0px;
+  }
   .first-part{
+    background-position:-30% 50%  ;
     max-height: 200px;
     margin: 10px 0px  10px 0px;
-    background-size: 60% 100%;
+    background-size: 80% 100%;
     img{
-    top: -65px;
+    top: -25px;
+    left: 30px;
     max-height: 250px;
     max-width: 220px;
     }
   }
   .second-part{
+    background-position:-10% 50%  ;
     margin: 0px;
     max-height: 200px;
     background-size: 60% 100%;
     img{
-      left: 200px;
-    top: -65px;
+      left: 40px;
+    top: -15px;
     max-height: 250px;
     max-width: 220px;
     }
@@ -646,18 +639,13 @@ max-width: 300px;
       left: 200px
     }
   }
-  .more-button{
-    left: 260px;
-  }
-  .more-style{
-    
-  }
+  
   .advertising-down{
     max-height: 200px;
     background-size: auto 100%;
     img{
       top: -15px;
-      left: 150px;
+      left: 30px;
     max-height: 250px;
     max-width: 220px;
     }
@@ -669,7 +657,7 @@ max-width: 300px;
     }
     100%{
       opacity: 1;
-      left: 150px;
+      left: 30px;
     }
   }
   .journal-title{
@@ -699,16 +687,31 @@ max-width: 300px;
      font-size: 20px;
      padding: 10px 20px;
    }
-  .more-button{
-    left: 235px;
+   .more-button{
+
+    margin: 60px 0px 0px 0px;
+  }
+  .advertising-down{
+    img{
+      top: -120px;
+    }
+  }
+  .first-part{
+    
+    img{
+      top: -20px;
+      left: 60px;
+    }
+      background-position-x: -100% ;
+    
   }
   .second-part{
     margin: 0px;
     max-height: 200px;
     background-size: 60% 100%;
     img{
-      left: 150px;
-    top: -65px;
+    left: 10px;
+    top: -5px;
     max-height: 240px;
     max-width: 220px;
     }
@@ -725,7 +728,8 @@ max-width: 300px;
   
   .advertising-down{
     img{
-      left: 130px;
+      top: 15px;
+      left: 25px;
     }
   }
   @keyframes advertising-down-img {
@@ -735,7 +739,7 @@ max-width: 300px;
     }
     100%{
       opacity: 1;
-      left: 130px;
+      left: 30px;
     }
   }
  }

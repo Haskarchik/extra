@@ -239,7 +239,6 @@ body {
 }
 
 .advertising-down {
-  position: relative;
   max-width: 1600px;
   max-height: 400px;
   background-image: url(../img/sale4.jpg);
@@ -249,11 +248,9 @@ body {
 }
 
 .advertising-down img {
-  padding-left: 50px;
   position: relative;
   top: -140px;
-  left: 58%;
-  z-index: 3;
+  left: 57.5%;
   max-height: 650px;
   max-width: 600px;
   -webkit-animation-name: advertising-down-img;
@@ -265,8 +262,8 @@ body {
 }
 
 .more-button3 {
-  position: relative;
-  top: 90px;
+  display: inline-block;
+  margin-top: 90px;
 }
 
 .up-row {
@@ -389,25 +386,18 @@ body {
 }
 
 .more-button {
-  position: relative;
-  top: 70px;
-  left: 590px;
+  display: inline-block;
+  margin: 60px 0px 0px 80.9%;
 }
 
 .more-button2 {
-  position: relative;
-  top: 70px;
+  display: inline-block;
+  margin-top: 60px;
 }
 
 .more-style {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -419,7 +409,6 @@ body {
 }
 
 .first-part {
-  position: relative;
   margin-left: 10px;
   margin-bottom: 10px;
   height: 295px;
@@ -435,14 +424,13 @@ body {
   -webkit-animation-duration: 3.5s;
           animation-duration: 3.5s;
   position: relative;
-  top: -80px;
-  left: -50px;
+  top: -140px;
+  left: 0px;
   height: 375px;
   width: 350px;
 }
 
 .second-part {
-  position: relative;
   background-image: url(../img/Soap-pad2.jpg);
   margin-left: 10px;
   height: 295px;
@@ -457,8 +445,8 @@ body {
   -webkit-animation-duration: 3.5s;
           animation-duration: 3.5s;
   position: relative;
-  top: -110px;
-  left: 350px;
+  top: -70px;
+  left: 200px;
   height: 450px;
   width: 400px;
 }
@@ -547,7 +535,7 @@ body {
 }
 
 .footer-container {
-  max-width: 900px;
+  max-width: 700px;
   margin: auto;
 }
 
@@ -558,43 +546,17 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.footer-column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.footer-column span {
-  font-size: 20px;
-}
-
-.footer-column li {
-  font-size: 20px;
-  margin-bottom: 7px;
-}
-
-.footer-column li :hover {
-  color: green;
-}
-
-.footer-column a {
-  padding: bottom 10px;
-  color: black;
-  text-decoration: none;
-}
-
-.footer-contact {
-  max-width: 300px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
 }
 
 .footer-end {
-  font-size: 15px;
+  padding: 5px;
+  font-size: 10px;
+  max-width: 100%;
+  border-top: solid 1px black;
 }
 
 /************************************/
@@ -624,7 +586,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .header-row {
     margin: 0px 30px;
     -webkit-box-pack: justify;
@@ -658,7 +620,7 @@ body {
     height: 200px;
     position: absolute;
     display: block;
-    left: -100%;
+    left: 100%;
     top: 110px;
     -webkit-transition: 1s;
     transition: 1s;
@@ -738,24 +700,30 @@ body {
     margin-top: 85px;
     margin-bottom: 10px;
   }
+  .more-button {
+    margin: 60px 0px 0px 0px;
+  }
   .first-part {
+    background-position: -30% 50%;
     max-height: 200px;
     margin: 10px 0px  10px 0px;
-    background-size: 60% 100%;
+    background-size: 80% 100%;
   }
   .first-part img {
-    top: -65px;
+    top: -25px;
+    left: 30px;
     max-height: 250px;
     max-width: 220px;
   }
   .second-part {
+    background-position: -10% 50%;
     margin: 0px;
     max-height: 200px;
     background-size: 60% 100%;
   }
   .second-part img {
-    left: 200px;
-    top: -65px;
+    left: 40px;
+    top: -15px;
     max-height: 250px;
     max-width: 220px;
   }
@@ -771,16 +739,13 @@ body {
       left: 200px;
     }
   }
-  .more-button {
-    left: 260px;
-  }
   .advertising-down {
     max-height: 200px;
     background-size: auto 100%;
   }
   .advertising-down img {
     top: -15px;
-    left: 150px;
+    left: 30px;
     max-height: 250px;
     max-width: 220px;
   }
@@ -791,7 +756,7 @@ body {
     }
     100% {
       opacity: 1;
-      left: 150px;
+      left: 30px;
     }
   }
   @keyframes advertising-down-img {
@@ -801,7 +766,7 @@ body {
     }
     100% {
       opacity: 1;
-      left: 150px;
+      left: 30px;
     }
   }
   .journal-title {
@@ -823,7 +788,17 @@ body {
     padding: 10px 20px;
   }
   .more-button {
-    left: 235px;
+    margin: 60px 0px 0px 0px;
+  }
+  .advertising-down img {
+    top: -120px;
+  }
+  .first-part {
+    background-position-x: -100%;
+  }
+  .first-part img {
+    top: -20px;
+    left: 60px;
   }
   .second-part {
     margin: 0px;
@@ -831,8 +806,8 @@ body {
     background-size: 60% 100%;
   }
   .second-part img {
-    left: 150px;
-    top: -65px;
+    left: 10px;
+    top: -5px;
     max-height: 240px;
     max-width: 220px;
   }
@@ -849,7 +824,8 @@ body {
     }
   }
   .advertising-down img {
-    left: 130px;
+    top: 15px;
+    left: 25px;
   }
   @-webkit-keyframes advertising-down-img {
     0% {
@@ -858,7 +834,7 @@ body {
     }
     100% {
       opacity: 1;
-      left: 130px;
+      left: 30px;
     }
   }
   @keyframes advertising-down-img {
@@ -868,7 +844,7 @@ body {
     }
     100% {
       opacity: 1;
-      left: 130px;
+      left: 30px;
     }
   }
 }
