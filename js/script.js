@@ -1,71 +1,16 @@
-
-const swiper = new Swiper('.swiper', {
-
-	loop: true,
-	navigation: {
-	  nextEl: '.swiper-button-next',
-	  prevEl: '.swiper-button-prev',
-	},
-	autoplay: {
-		delay: 10000,
-		stopOnLastSlide: false,
-		disableOnInteraction: false
-	
-	},
-
-	simulateTouch: false,
-	centeredSlides: true,
-	speed: 1200,
-
-		// События
-		on: {
-			// Событие инициализации
-			init: function () {
-				
-			},
-			// Событие смены слайда
-			slideChange: function () {
-
-				
-			
-				
-			}
-		},
-/*
-		// Брейк поинты (адаптив)
-	// Ширина экрана
-	breakpoints: {
-		320: {
-			slidesPerView: 1,
-		},
-		480: {
-			slidesPerView: 2,
-		},
-		992: {
-			slidesPerView: 3,
-		}
-	},
-	
-	
-	// Брейк поинты (адаптив)
-	// Соотношение сторон
-	breakpoints: {
-		'@0.75': {
-			slidesPerView: 1,
-		},
-		'@1.00': {
-			slidesPerView: 2,
-		},
-		'@1.50': {
-			slidesPerView: 3,
-		}
-	},
-	*/
-
-  });
+  // Меню бургер
+ 
+  const headerBurger = document.querySelector('.header-burger');
+  const navBody = document.querySelector('.header-nav');
+  if (headerBurger) {
+	  headerBurger.addEventListener("click", function () {
+		  headerBurger.classList.toggle('_active');
+		  navBody.classList.toggle('_active');
+	  });
+  }
 
 
-
+// Карточая панель
 
   const animItems = document.querySelectorAll('.jurnal-card');
   
@@ -99,17 +44,37 @@ const swiper = new Swiper('.swiper', {
 		  return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
 	  }
   
-	  
+	  setTimeout(() => {
+		animOnScroll();
+	}, 300);
   }
-  // Меню бургер
- 
-const headerBurger = document.querySelector('.header-burger');
-const navBody = document.querySelector('.header-nav');
-if (headerBurger) {
-	headerBurger.addEventListener("click", function () {
-		headerBurger.classList.toggle('_active');
-		navBody.classList.toggle('_active');
-	});
-}
 
+
+
+
+
+
+
+//SWIPER
+
+  const swiper = new Swiper('.swiper', {
+
+	loop: true,
+	navigation: {
+	  nextEl: '.swiper-button-next',
+	  prevEl: '.swiper-button-prev',
+	},
+	autoplay: {
+		delay: 10000,
+		stopOnLastSlide: false,
+		disableOnInteraction: false
+	
+	},
+
+	simulateTouch: false,
+	centeredSlides: true,
+	speed: 1200,
+
+	
+  });
 
