@@ -694,5 +694,49 @@ max-width: 300px;
   }
 
  }
+ @media (max-width:415px){
+   .more-style{
+     padding: 10px 20px;
+   }
+  .more-button{
+    left: 230px;
+  }
+  .second-part{
+    margin: 0px;
+    max-height: 200px;
+    background-size: 60% 100%;
+    img{
+      left: 150px;
+    top: -65px;
+    max-height: 240px;
+    max-width: 220px;
+    }
+  }
+  @keyframes second-part-img {
+    0%{
+      opacity: 0.1;
+      left: -200px
+    }
+  }
+  
+  
+  
+  
+  .advertising-down{
+    img{
+      left: 130px;
+    }
+  }
+  @keyframes advertising-down-img {
+    0%{
+      opacity: 0.1;
+      left: 270px;
+    }
+    100%{
+      opacity: 1;
+      left: 130px;
+    }
+  }
+ }
 
 /************************************/
