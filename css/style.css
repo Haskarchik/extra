@@ -1146,7 +1146,7 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0px 30px;
+    padding: 0px 10px;
   }
   .mobile-category {
     display: block;
