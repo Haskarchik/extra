@@ -310,6 +310,9 @@ h1, h2, h3, h4, h5, h6 {
     }
        
 }
+.mobile-header-active{
+  display: none;
+}
 .mobile-header{
   display: flex;
   justify-content: space-evenly;
@@ -630,6 +633,9 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 10px;
     
 }
+.category-mobile-block{
+  display: none;
+}
 
 .category {
     font-family: 'Roboto';
@@ -752,6 +758,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 325px;
     background-color:#ECFCE9 ;
     img{
+      
         max-height: 280px;
     }
     border-radius: 10px;
@@ -865,12 +872,17 @@ a:hover{
 
 }
 .header-row{
+  justify-content: space-between;
   position: relative;
   
   img{
     height: 30px;
     width: 30px;
   }
+}
+.header-nav{
+  display: flex;
+  align-items: center;
 }
 .nav{
   font-size: 11px;
@@ -902,6 +914,15 @@ li:first-child._active::before{
   .fav-button{
     display: none;
   }
+  .mobile-favorite{
+    align-self: center;
+    
+    height: 20px ;
+    width: 20px;
+    background-image: url(../img/icons/star.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
   .header-contact{
    
     margin: 0px;
@@ -926,7 +947,7 @@ li:first-child._active::before{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0px 30px;
+    padding: 0px 10px;
  
 
   }
@@ -950,7 +971,7 @@ li:first-child._active::before{
     display: none;
 }
 .location{
-  margin-right: 30px;
+  margin-right: 10px;
     display: flex;
     align-items: center;
     img{
@@ -969,7 +990,7 @@ li:first-child._active::before{
   span:first-child::after{
     top: 2px;
     height: 23px;
-    left: 25px;
+    left: 22px;
     
       
     }
@@ -977,7 +998,7 @@ li:first-child._active::before{
 
   /************************************/
   .content{
-    margin-top: 15px;
+    margin: 15px 0px;
   }
   .advesting{
     
@@ -1087,21 +1108,38 @@ li:first-child._active::before{
     display: none;
   }
   .product-card{
-    height:180px;
-    width: 80px;
+    padding: 10px 0px 0px 0px;
+    border-radius: 0px;
+    position: relative;
+    height:175px;
+    width: 100px;
     img{
-      height: 90px;
+      height: 100px;
+      max-width: 90px;
     }
     margin: 10px;
     box-shadow: none;
   }
   .card-label {
-    font-size: 9px;
-   
+   position: absolute;
+    padding: 15px 5px 0px;
+   font-size: 9px;
+  
+   top: 100px;
   }
   .card-items{
+    padding: 7px;
+    margin: 0px;
+    width: 100px;
+    
     img{
       height: 15px;
+    }
+    span{
+      font-size: 9px;
+      line-height: 11px;
+      padding: 3px 5px;
+      margin: 0px;
     }
   }
   /************************************/
@@ -1135,7 +1173,7 @@ li:first-child._active::before{
 
 @media (max-width:375px) {
   .mobile-header-active{
-    padding: 0px 3px;
+    padding: 0px 5px;
   }
   
 }
