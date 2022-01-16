@@ -644,8 +644,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .advesting-column-top img {
-  height: 320px;
-  width: 220px;
+  height: 280px;
+  width: 160px;
 }
 
 .column-more {
@@ -811,6 +811,10 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+#category {
+  position: absolute;
+}
+
 .category {
   font-family: 'Roboto';
   font-weight: 300;
@@ -974,6 +978,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .product-card img {
+  max-width: 300px;
   max-height: 280px;
 }
 
@@ -1137,6 +1142,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   .nav-list li:first-child._active::before {
     left: 50px;
+  }
+  #category {
+    position: relative;
   }
   .fav-button {
     display: none;

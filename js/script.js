@@ -7,12 +7,12 @@ const swiper = new Swiper('.swiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    //	autoplay: {
-    //		delay: 10000,
-    //		stopOnLastSlide: false,
-    //		disableOnInteraction: false
-    //
-    //	},
+    	autoplay: {
+    		delay: 10000,
+    		stopOnLastSlide: false,
+    		disableOnInteraction: false
+    
+    	},
 
 
     centeredSlides: true,
@@ -149,6 +149,7 @@ document.onclick = event => {
                 elem.classList.add('hide');
             }
         });
+        categoryList.classList.add('_hide');
     }else if (event.target.classList.contains('category-mobile')) {
         
         

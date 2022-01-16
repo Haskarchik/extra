@@ -503,8 +503,8 @@ h1, h2, h3, h4, h5, h6 {
     }
  
     img{
-        height: 320px;
-        width: 220px;
+        height: 280px;
+        width: 160px;
     }
 }
 .column-more{
@@ -640,7 +640,10 @@ h1, h2, h3, h4, h5, h6 {
 .category-mobile-block{
   display: none;
 }
+#category{
+position: absolute;
 
+}
 .category {
     font-family: 'Roboto';
     font-weight: 300;
@@ -762,7 +765,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 325px;
     background-color:#ECFCE9 ;
     img{
-      
+        max-width: 300px;
         max-height: 280px;
     }
     border-radius: 10px;
@@ -915,6 +918,9 @@ li:first-child._active::before{
 
 }
   }
+#category{
+  position: relative;
+}
   .fav-button{
     display: none;
   }
