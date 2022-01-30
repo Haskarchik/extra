@@ -755,7 +755,7 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: space-between;
   height: 300px;
   width: 575px;
-  background-image: url(/img/труби.jpg);
+  background-image: url(../img/труби.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -813,7 +813,7 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: space-between;
   height: 300px;
   width: 575px;
-  background-image: url(/img/Soap-pad2.jpg);
+  background-image: url(../img/Soap-pad2.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
