@@ -2,24 +2,66 @@
 
 const swiper = new Swiper('.swiper', {
 
-    loop: true,
+    loop: false,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    	autoplay: {
-    		delay: 10000,
-    		stopOnLastSlide: false,
-    		disableOnInteraction: false
+    autoplay: {
+        delay: 4000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false
     
-    	},
-
-
+      },
     centeredSlides: true,
     speed: 1200,
 
 
 });
+
+///LANGUAGES////////////////////////////
+const uaLanguages = document.querySelectorAll('.languages-ua');
+const ruLanguages = document.querySelectorAll('.languages-ru');
+const ruVersion = document.querySelectorAll('.ru-version');
+const uaVersion = document.querySelectorAll('.ua-version');
+
+uaLanguages.forEach(function(elem){
+    elem.addEventListener("click", function() {
+        ruVersion.forEach(function(elem) {
+            elem.classList.remove('_active')
+        })
+        uaVersion.forEach(function(elem) {
+            elem.classList.add('_active')
+        })
+        uaLanguages.forEach(function(elem){
+            ruLanguages.forEach(function(elem){
+                elem.classList.remove('_active');
+            })
+            elem.classList.add('_active');
+        })
+       
+    });
+})  
+ruLanguages.forEach(function(elem){
+    elem.addEventListener("click", function() {
+        ruVersion.forEach(function(elem) {
+            elem.classList.add('_active')
+        })
+        uaVersion.forEach(function(elem) {
+            elem.classList.remove('_active')
+        })
+        ruLanguages.forEach(function(elem){
+            uaLanguages.forEach(function(elem){
+                elem.classList.remove('_active');
+            })
+            elem.classList.add('_active');
+
+        })
+       
+    });
+})  
+
+
 ///WINDOW SCROLL////////////////////////
 
 const animItem = document.querySelector('.products');
@@ -33,7 +75,7 @@ if (animItem) {
 
         const animItemHeight = animItem.offsetHeight;
         const animItemOffset = offset(animItem).top;
-        
+
         const animStart = 2;
 
         let animItemPoint = window.innerHeight - animItemHeight / animStart;
@@ -66,30 +108,18 @@ if (animItem) {
 const anchors = document.querySelectorAll('a.scroll-to')
 
 for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault()
-    
-    const blockID = anchor.getAttribute('href')
-    
-    document.querySelector(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
-}
-//FAVORITE///////////////////////////
-const favButton = document.querySelector('.fav-button');
-const favBlock = document.querySelector('.fav-block');
-const favList = document.querySelector('.fav-list');
-const favText = document.querySelector('.fav-text');
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault()
 
-if (favButton) {
-	favButton.addEventListener("click", function () {
-		favButton.classList.toggle('_active');
-		favBlock.classList.toggle('_active');
-   
-	});
-};
+        const blockID = anchor.getAttribute('href')
+
+        document.querySelector(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
+}
+
 ///SEARCH////////////////////////////
 
 document.querySelector('#search-box').oninput = function () {
@@ -138,8 +168,8 @@ document.onclick = event => {
         } else {
             categoryBtn.innerHTML = CurentText;
         }
-        
-        
+
+
         if (event.target.tagName !== 'LI') return false;
         let filterClass = event.target.dataset.f;
 
@@ -150,9 +180,9 @@ document.onclick = event => {
             }
         });
         categoryList.classList.add('_hide');
-    }else if (event.target.classList.contains('category-mobile')) {
-        
-        
+    } else if (event.target.classList.contains('category-mobile')) {
+
+
         categoryListAll.forEach(elemMob => {
             elemMob.classList.remove('_active')
         })
@@ -167,5 +197,5 @@ document.onclick = event => {
             }
         });
     }
-    
+
 }

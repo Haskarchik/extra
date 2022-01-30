@@ -499,7 +499,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .products::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
+  height: 10px;
 }
 
 .products::-webkit-scrollbar-track {
@@ -638,6 +639,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fav-star {
+  max-width: 50px;
   cursor: pointer;
   display: block;
   position: absolute;
