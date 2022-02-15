@@ -172,6 +172,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: auto;
 }
 
 .header {
@@ -667,7 +668,7 @@ h1, h2, h3, h4, h5, h6 {
 .product-second-info {
   display: block;
   height: 150px;
-  width: 825px;
+  max-width: 825px;
   background-color: #C5F6BC;
   padding: 15px 60px 0px 25px;
   font-family: 'Montserrat';
@@ -862,7 +863,7 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
   }
   .header-contact {
-    margin: 0px;
+    margin: 0px 5px 0px 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1157,6 +1158,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   .product-mob-second-info {
     width: 300px;
+  }
+  .fav-star {
+    left: 240px;
   }
 }
 
