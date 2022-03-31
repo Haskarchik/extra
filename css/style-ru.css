@@ -180,7 +180,7 @@ h1, h2, h3, h4, h5, h6 {
   position: -webkit-sticky;
   position: sticky;
   width: 100%;
-  top: -1px;
+  top: -5px;
   z-index: 3;
   padding: 5px;
   background: #63E64C;
@@ -259,7 +259,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 5px;
   width: 100px;
   background-color: #4C91E0;
-  left: -6px;
+  left: -2px;
   top: 55px;
   -webkit-transition-duration: .5s;
           transition-duration: .5s;
@@ -267,24 +267,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-list li:first-child._active::before {
   content: '';
-  left: 106px;
+  left: 118px;
 }
 
 .start-btn-ru {
-  width: 85px;
-}
-
-.start-btn-ru._active::before {
-  content: '';
-  left: 113px;
+  width: 95px;
 }
 
 .nav-ru {
   margin: 0px 50px;
-}
-
-#product-btn {
-  margin-left: -5px;
 }
 
 .mobile-category {
@@ -309,11 +300,11 @@ h1, h2, h3, h4, h5, h6 {
 .fav-button::before {
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
-  left: 100px;
+  left: 80px;
 }
 
 .fav-button::after {
-  left: 93px;
+  left: 73px;
   -webkit-transform: rotate(-40deg);
           transform: rotate(-40deg);
 }
@@ -329,11 +320,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fav-button-ru::before {
-  left: 130px;
+  left: 150px;
 }
 
 .fav-button-ru::after {
-  left: 122px;
+  left: 142px;
 }
 
 .fav-block {
@@ -552,7 +543,6 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  overflow: hidden;
 }
 
 .ml-block span {
@@ -568,30 +558,24 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px;
 }
 
-.advesting {
-  margin: 0px 10px;
-}
-
 .advesting-up {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   position: relative;
-  min-width: 100%;
-  margin-bottom: 25px;
+  min-width: 0;
 }
 
 .advesting-swiper {
-  width: 50%;
-  margin-right: 25px;
+  margin: 0px 25px 25px 0px;
 }
 
 .swiper {
   height: 600px;
-  max-width: 580px;
+  width: 580px;
 }
 
 .swiper-slide {
@@ -752,11 +736,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .advesting-column {
-  margin: 0px 0px 0px 0px;
+  margin: 0px 0px 25px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -771,6 +754,7 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 300px;
+  width: 575px;
   background-image: url(../img/труби.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -828,6 +812,7 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 300px;
+  width: 575px;
   background-image: url(../img/Soap-pad2.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -1263,55 +1248,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /************************************/
-@media (max-width: 1024px) {
-  .container {
-    max-width: 1000px;
-  }
-  .header-row a img {
-    height: 50px;
-    width: 50px;
-  }
-  .nav {
-    margin: 0px 50px 0px 20px;
-    font-size: 20px;
-    line-height: 24px;
-  }
-  .tel img {
-    height: 25px;
-    width: 25px;
-    margin-right: 7px;
-  }
-  .tel a {
-    font-size: 20px;
-  }
-  .location img {
-    height: 25px;
-    width: 25px;
-  }
-  .street {
-    font-size: 22px;
-    line-height: 24px;
-  }
-  .nav-list li:first-child::before {
-    top: 38px;
-    width: 85px;
-  }
-  .fav-button::before {
-    left: 85px;
-  }
-  .fav-button::after {
-    left: 78px;
-  }
-  .languages {
-    font-size: 22px;
-    line-height: 24px;
-  }
-  .advesting-up {
-    max-width: 1020px;
-    overflow: hidden;
-  }
-}
-
 @media (max-width: 480px) {
   body {
     background-color: #EFEFEF;
@@ -1356,7 +1292,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 2px;
     width: 50px;
     background-color: #4C91E0;
-    left: -7px;
+    left: -2px;
     top: 55px;
     -webkit-transition-duration: .5s;
             transition-duration: .5s;
@@ -1419,7 +1355,7 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0px 15px;
+    padding: 0px 10px;
   }
   .mobile-category {
     display: block;
@@ -1468,7 +1404,7 @@ h1, h2, h3, h4, h5, h6 {
   .languages span:first-child::after {
     top: 2px;
     height: 23px;
-    left: 20px;
+    left: 22px;
   }
   /************************************/
   .content {

@@ -257,6 +257,10 @@ h1, h2, h3, h4, h5, h6 {
   left: 118px;
 }
 
+#category {
+  position: absolute;
+}
+
 .mobile-category {
   display: none;
 }
@@ -296,6 +300,14 @@ h1, h2, h3, h4, h5, h6 {
 .fav-button._active::after {
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
+}
+
+.fav-button-ru::before {
+  left: 128px;
+}
+
+.fav-button-ru::after {
+  left: 120px;
 }
 
 .fav-block {
@@ -848,6 +860,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   .nav-list li:first-child._active::before {
     left: 50px;
+  }
+  #category {
+    position: relative;
   }
   .fav-button {
     display: none;

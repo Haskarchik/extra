@@ -178,6 +178,9 @@ h1, h2, h3, h4, h5, h6 {
         left: 118px;
     }
 }
+#category{
+  position: absolute;
+}
 .mobile-category{
   display: none;
   
@@ -209,6 +212,12 @@ h1, h2, h3, h4, h5, h6 {
    .fav-button._active::after{
     transform: rotate(40deg);
 }
+.fav-button-ru::before{
+left: 128px;
+}
+.fav-button-ru::after{
+  left: 120px;
+  }
 
 .fav-block {
     z-index: 2;
@@ -660,6 +669,9 @@ li:first-child._active::before{
 
 }
   }
+  #category{
+    position: relative;
+  }
   .fav-button{
     display: none;
   }
@@ -700,6 +712,7 @@ li:first-child._active::before{
  
 
   }
+  .category-header-btn{}
   .mobile-category{
     display: block;
   }

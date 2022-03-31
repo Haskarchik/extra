@@ -118,7 +118,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 /************************************/
 .wrapper {
-  
   min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -128,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
     
     position: sticky;
     width: 100%;
-    top: -1px; 
+    top: -5px; 
     z-index: 3;
     padding: 5px;
     background: #63E64C;
@@ -173,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0px 14.5px;
         position: relative;
     }
-   
+
     li:last-child{
         cursor:pointer;
         user-select:none;
@@ -185,33 +184,25 @@ h1, h2, h3, h4, h5, h6 {
         height: 5px;
         width: 100px;
         background-color:#4C91E0 ;
-        left: -6px;
+        left: -2px;
         top: 55px;
         transition-duration: .5s;
     }
     li:first-child._active::before{
         content: '';
 
-        left: 106px;
+        left: 118px;
        
      
     }
-    
 }
 .start-btn-ru{
-  width: 85px;
-}
-.start-btn-ru._active::before{
-  content: '';
-
-        left: 113px;
+  width: 95px;
 }
 .nav-ru{
 margin:0px 50px  ;
 }
-#product-btn{
-  margin-left: -5px;
-}
+
 .mobile-category{
   display: none;
 }
@@ -229,10 +220,10 @@ margin:0px 50px  ;
 }
 .fav-button::before{
     transform: rotate(40deg);
-    left: 100px;
+    left: 80px;
 }
 .fav-button::after{
-    left: 93px;
+    left: 73px;
     transform: rotate(-40deg);
 }
 
@@ -243,11 +234,11 @@ margin:0px 50px  ;
        transform: rotate(40deg);
 }
 .fav-button-ru::before{
-  left: 130px;
+  left: 150px;
 
 }
 .fav-button-ru::after{
-  left: 122px;
+  left: 142px;
 
 }
 .fav-block {
@@ -422,10 +413,8 @@ a{
 }
 /************************************/
 .content {
-    
     margin: 60px 0px;
     flex: 1 1 auto;
-    overflow: hidden;
 }
 
 .ml-block{
@@ -442,23 +431,18 @@ a{
       border-radius: 10px;
   }
 }
-.advesting{
-  margin: 0px 10px ;
-}
 .advesting-up {
     display: flex;
-    justify-content:center;
+    justify-content: space-evenly;
     position: relative;
-    min-width: 100%;
-    margin-bottom: 25px;
+    min-width: 0;
 }
 .advesting-swiper {
- width: 50%;
-  margin-right: 25px;
+    margin: 0px 25px 25px 0px;
 }
 .swiper {
     height: 600px;
-    max-width: 580px;
+    width: 580px;
 }
 
 
@@ -557,7 +541,6 @@ img{
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .swiper-slide3 {
     
     img{
@@ -601,16 +584,15 @@ img{
     }
 }
 .advesting-column {
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 25px 0px;
     display: flex;
-    width: 100%;
     flex-direction: column;
 }
 .advesting-column-top {
     display: flex;
     justify-content: space-between;
     height: 300px;
-    
+    width: 575px;
     background-image: url(../img/труби.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -650,7 +632,7 @@ img{
     display: flex;
     justify-content: space-between;
     height: 300px;
-    
+    width: 575px;
     background-image: url(../img/Soap-pad2.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -1007,73 +989,6 @@ a:hover{
     margin-bottom: 30px;
 }
 /************************************/
-
-
-@media(max-width:1024px){
-  .container{
-    max-width: 1000px;
-  }
-  .header-row  {
-    a{
-    img{
-      height: 50px;
-      width: 50px;
-    }
-  }
-}
-.nav{
-  margin: 0px 50px 0px 20px;
-  font-size: 20px;
-  line-height: 24px;
-}
-.tel{
-  img{
-    height: 25px;
-    width: 25px;
-    margin-right: 7px;
-  }
-  a{
-    
-    font-size:20px;
-  }
-}
-.location img {
-  height: 25px;
-  width: 25px;
-}
-.street {
-  font-size: 22px;
-  line-height: 24px;
-}
-.nav-list{
-  li:first-child::before {
-    top:38px;
-    width: 85px;
-  }
-}
-.fav-button::before {
-  left: 85px;
-}
-.fav-button::after {
-  left: 78px;
-}
-
-.languages{
-  font-size: 22px;
-  line-height: 24px;
-}
-.advesting-up {
- max-width: 1020px;
- overflow: hidden;
-}
-}
-@media (max-width:768px) {
-  
-  
-
-
-}
-
 @media(max-width:480px){
   body{
     background-color:#EFEFEF ;
@@ -1115,7 +1030,7 @@ a:hover{
     height: 2px;
     width: 50px;
     background-color:#4C91E0 ;
-    left: -7px;
+    left: -2px;
     top: 55px;
     transition-duration: .5s;
 }
@@ -1172,7 +1087,7 @@ li:first-child._active::before{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0px 15px;
+    padding: 0px 10px;
  
 
   }
@@ -1215,7 +1130,7 @@ li:first-child._active::before{
   span:first-child::after{
     top: 2px;
     height: 23px;
-    left: 20px;
+    left: 22px;
     
       
     }
