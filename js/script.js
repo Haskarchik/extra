@@ -8,14 +8,14 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
     autoplay: {
-        delay: 4000,
-        stopOnLastSlide: false,
-        disableOnInteraction: false
-    
-      },
-    centeredSlides: true,
-    speed: 1200,
-
+         delay: 4000,
+         stopOnLastSlide: false,
+         disableOnInteraction: false
+     
+       },
+     centeredSlides: true,
+     speed: 1200,
+ 
 
 });
 
@@ -60,8 +60,20 @@ ruLanguages.forEach(function(elem){
        
     });
 })  
+///MOB-BUTTON
+const startButton = document.querySelector('ul');
+const categoryButton = document.createElement('li');
+const br = document.createElement('br');
 
-
+function showBtn(){
+    categoryButton.innerHTML = '<a class="scroll-to  " href="#category-mobile">Категорії</a>' ;
+    categoryButton.id = 'category';
+    
+    startButton.append(categoryButton);
+}
+if(window.innerWidth <= 480){
+ showBtn();
+}
 ///WINDOW SCROLL////////////////////////
 
 const animItem = document.querySelector('.products');
