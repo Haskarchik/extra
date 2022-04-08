@@ -71,7 +71,7 @@ function showBtn(){
     
     startButton.append(categoryButton);
 }
-if(window.innerWidth <= 480){
+if(window.innerWidth <= 500){
  showBtn();
 }
 ///WINDOW SCROLL////////////////////////
