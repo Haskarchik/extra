@@ -1082,7 +1082,7 @@ a:hover{
 }
 @media(max-width:480px){
 .container{
-  max-width: 400px;
+  max-width: 455px;
   overflow: hidden;
 }
 
@@ -1351,6 +1351,10 @@ li:first-child._active::before{
         width: 60px;
         
     }
+}
+.advesting-swiper {
+   width: 100%;
+   margin-right: 0px;
 }
 .advesting-colmun-down {
   height: 140px;
