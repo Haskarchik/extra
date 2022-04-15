@@ -88,6 +88,32 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
   }
 }
+@-webkit-keyframes mob-del-starlight {
+  50% {
+    background-size: 0%;
+  }
+}
+@keyframes mob-del-starlight {
+  50% {
+    background-size: 0%;
+  }
+}
+@-webkit-keyframes mob-push {
+  40% {
+    margin-top: -10px;
+  }
+  70% {
+    margin-top: 5px;
+  }
+}
+@keyframes mob-push {
+  40% {
+    margin-top: -10px;
+  }
+  70% {
+    margin-top: 5px;
+  }
+}
 @-webkit-keyframes push {
   50% {
     top: 5px;
@@ -1174,15 +1200,15 @@ h1, h2, h3, h4, h5, h6 {
   .popup {
     position: fixed;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5960784314);
     top: 0;
     left: 0;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     opacity: 0;
   }
 
   .popup.active {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5960784314);
     opacity: 1;
   }
 
@@ -1196,8 +1222,9 @@ h1, h2, h3, h4, h5, h6 {
     width: 250px;
     height: 100vh;
     top: 0;
-    right: -100vh;
-    transition-duration: 1s;
+    right: -250px;
+    transition-duration: 0.5s;
+    overflow: auto;
   }
 
   .popup-body.active {
@@ -1324,6 +1351,26 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url(../img/icons/star.svg);
     background-size: contain;
     background-repeat: no-repeat;
+  }
+  .mobile-favorite img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .mobile-favorite.push {
+    -webkit-animation-name: mob-push;
+            animation-name: mob-push;
+    -webkit-animation-duration: 0.8s;
+            animation-duration: 0.8s;
+  }
+
+  .mobile-favorite.starlight.del-efect {
+    background-size: 100%;
+    background-position: center;
+    -webkit-animation-name: mob-del-starlight;
+            animation-name: mob-del-starlight;
+    -webkit-animation-duration: 0.8s;
+            animation-duration: 0.8s;
   }
 
   .mobile-favorite.starlight {

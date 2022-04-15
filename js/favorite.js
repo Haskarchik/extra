@@ -32,33 +32,27 @@ const generateCartProduct = (img, title, litr, id) => {
      </div>
     </div>
     </li>`
-}
+};
 
 const popupActive = () => {
-    if(favListMob.length <! 0){
-    popup.classList.toggle('active');
-    popupBody.classList.toggle('starlight');
+    if(favList.children.length > 0){
+        popup.classList.toggle('active');
+        popupBody.classList.toggle('active');
     }
-    
-}
-
+};
 
 const hideText = () =>{
     if(favList.children.length > 0){
         favText.classList.add('_hide');
-        mobFavBtn.classList.add('_active');
-    }
-        
+        mobFavBtn.classList.add('starlight');
+    }  
         else {
             favText.classList.remove('_hide');
         }
-        
 };
 
 const updateStorage = () =>{
-
     let html = favList.innerHTML.trim();
-    
     if(html.length > 1)
         localStorage.setItem('products', html);
     else
@@ -74,23 +68,21 @@ const initionalState = () =>{
         let id = el.dataset.id.trim();
         document.querySelector(`.product-card[data-id="${id}"]`)
         .querySelector('.fav-star').classList.add('_active')
-       
 })
 }
 
 const deleteProduct = (productParent) =>{
-    let id = productParent.dataset.id.trim();
+    let id = productParent;
     let products = document.querySelectorAll('.product-card');
+
     products.forEach((e)=> {
-        
-        if(e.dataset.id == id){
+        if(e.dataset.id == id.trim()){
            e.querySelector('.fav-star').classList.remove('_active')
         }
-       
     })
-    
-    productParent.remove();
-
+    favLists.forEach((e) =>{
+        e.querySelector(`li[data-id="${id}"]`).remove();
+ })
 }
 
 if (favButton) {
@@ -101,26 +93,30 @@ if (favButton) {
         innitionalState();
     });
 };
+
 mobFavBtn.addEventListener("click", function(){
-    mobFavBtn.classList.add('_active');
+    updateStorage();
     popupActive();
 }) ;
 
-
 function delPush() {
     favButton.classList.remove('push');
+    mobFavBtn.classList.remove('push') 
   }
 
 function delDel() {
     favButton.classList.remove('del-efect');
+    mobFavBtn.classList.remove('del-efect') 
   }
-  
 
 const pushEffect = () =>{
-      favButton.classList.add('push');  
+      favButton.classList.add('push'); 
+      mobFavBtn.classList.add('push') 
 };
+
 const delEffect = () =>{
     favButton.classList.add('del-efect');  
+    mobFavBtn.classList.add('del-efect') 
 };
 
 favStar.forEach(function (elem){
@@ -138,52 +134,51 @@ favStar.forEach(function (elem){
 
 
         let products = document.querySelectorAll('.fav-list li');
-        
-        products.forEach((e)=>{
-           
-          if(e.dataset.id.trim() == id){
-            
-             sumId = id;
 
+        products.forEach((e)=>{
+          if(e.dataset.id.trim() == id){
+             sumId = id;
           }
            
         });
         if(sumId !== id){
-        favList.insertAdjacentHTML('beforeend', generateCartProduct(img, title, litr,  id));
-        favListMob.insertAdjacentHTML('beforeend', generateCartProduct(img, title, litr,  id));
+             favList.insertAdjacentHTML('beforeend', generateCartProduct(img, title, litr,  id));
+             favListMob.insertAdjacentHTML('beforeend', generateCartProduct(img, title, litr,  id));
         }
         hideText();
         updateStorage();
-        
-       
         pushEffect();
         setTimeout(delPush, 800);
     })
 
-
-
     favList.addEventListener('click', (e) => {
+       
         if(e.target.classList.contains('del')){
-            deleteProduct(e.target.closest('li'))
-
+            deleteProduct(e.target.closest('li').dataset.id);
         }
         delEffect();
         setTimeout(delDel, 800);
         hideText();
         updateStorage();
-        
     })
     favListMob.addEventListener('click', (e) => {
         if(e.target.classList.contains('del')){
-            deleteProduct(e.target.closest('li'))
-
+            deleteProduct(e.target.closest('li').dataset.id);
+        }
+       
+        if(favListMob.children.length <= 0){
+            popup.classList.remove('active');
+            popupBody.classList.remove('active');
+            setTimeout(() => {
+                mobFavBtn.classList.remove('starlight');
+            }, 600); 
         }
         delEffect();
         setTimeout(delDel, 800);
         hideText();
         updateStorage();
-        
     })
+    
 
 })
 initionalState();
