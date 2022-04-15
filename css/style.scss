@@ -399,7 +399,7 @@ margin:0px 50px  ;
   }
  .del{
    cursor: pointer;
-    background-image: url(/img/icons/Del.svg);
+    background-image: url(/img/icons/Del2.png);
     background-repeat: no-repeat;
     margin: -65px -15px 0px 0px; 
     flex: 1;
@@ -1107,7 +1107,9 @@ a:hover{
     margin-bottom: 30px;
 }
 /************************************/
-
+.popup{
+  display: none;
+}
 
 @media(max-width:1024px){
   .container{
@@ -1172,7 +1174,7 @@ a:hover{
   .popup {
     position: fixed;
     width: 100%;
-   
+    display: block;
     top: 0;
     left: 0;
     transition-duration: .5s;
@@ -1282,7 +1284,7 @@ li:first-child._active::before{
   }
  .del{
    cursor: pointer;
-    background-image: url(/img/icons/Del.svg);
+    background-image: url(/img/icons/Del2.png);
     background-repeat: no-repeat;
     background-size: contain;
     margin: -40px 5px 0px 0px; 

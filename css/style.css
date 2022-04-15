@@ -437,7 +437,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .del {
   cursor: pointer;
-  background-image: url(/img/icons/Del.svg);
+  background-image: url(/img/icons/Del2.png);
   background-repeat: no-repeat;
   margin: -65px -15px 0px 0px;
   flex: 1;
@@ -1138,6 +1138,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /************************************/
+.popup {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .container {
     max-width: 1000px;
@@ -1200,6 +1204,7 @@ h1, h2, h3, h4, h5, h6 {
   .popup {
     position: fixed;
     width: 100%;
+    display: block;
     top: 0;
     left: 0;
     transition-duration: 0.5s;
@@ -1304,7 +1309,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .del {
     cursor: pointer;
-    background-image: url(/img/icons/Del.svg);
+    background-image: url(/img/icons/Del2.png);
     background-repeat: no-repeat;
     background-size: contain;
     margin: -40px 5px 0px 0px;
