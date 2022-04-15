@@ -1,3 +1,4 @@
+
 ///MOB-BUTTON
 const startButton = document.querySelector('ul');
 const categoryButton = document.createElement('li');
@@ -34,7 +35,6 @@ if(window.innerWidth <= 480){
        },true)
    };
  
-
 
 //////SWIPER///////////////////////////////////
 

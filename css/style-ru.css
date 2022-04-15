@@ -296,6 +296,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ECFCE9;
   border: 0.5px solid black;
   transition-duration: 0.6s;
+  overflow: auto;
+  padding: 5px 20px;
 }
 
 .fav-block._active {
@@ -314,11 +316,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fav-list {
-  background-color: white;
   position: absolute;
-  width: 398px;
-  max-height: 456px;
-  overflow: auto;
   transition-duration: 0.7s;
 }
 .fav-list li a {
@@ -335,23 +333,53 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fav-card {
+  display: flex;
+  justify-content: space-between;
   transition-duration: 0.1s;
-  background-color: honeydew;
-  border: solid 0.5px green;
-  display: none;
+  border-bottom: solid 0.5px black;
+  padding-bottom: 10px;
+  width: 370px;
   align-items: center;
 }
 .fav-card img {
-  height: 150px;
+  flex: 2;
+  background-size: contain;
+  height: 100px;
+  max-width: 60px;
 }
 
-.fav-card._display {
-  display: flex;
+.del {
+  cursor: pointer;
+  background-image: url(/img/icons/Del.svg);
+  background-repeat: no-repeat;
+  margin: -65px -15px 0px 0px;
+  flex: 1;
+  height: 20px;
+  width: 20px;
 }
 
 .fav-label {
-  font-size: 22px;
-  margin-right: 20px;
+  height: 100%;
+  flex: 6;
+  text-align: left;
+  font-size: 18px;
+  margin-right: 5px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fav-ml-block span {
+  display: inline-block;
+  margin: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 7px 12px;
+  border-radius: 7px;
 }
 
 .header-contact {
