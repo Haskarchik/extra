@@ -399,7 +399,7 @@ margin:0px 50px  ;
   }
  .del{
    cursor: pointer;
-    background-image: url(/img/icons/Del2.png);
+    background-image: url(../img/icons/Del2.png);
     background-repeat: no-repeat;
     background-size: contain;
     margin: -65px -15px 0px 0px; 
@@ -694,7 +694,7 @@ img{
     margin-right: 20px;
     img{
         opacity: 0.6;
-        transform: rotate(180deg);
+        
         transition-duration: 0.5s;
     }
     :hover{

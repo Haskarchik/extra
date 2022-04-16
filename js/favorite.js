@@ -62,12 +62,13 @@ const updateStorage = () =>{
 const initionalState = () =>{
     favList.innerHTML = localStorage.getItem('products');
     favListMob.innerHTML = localStorage.getItem('products');
-
+    console.log( favList);
     hideText();
-    favList.querySelectorAll('li').forEach(el => {
+    favList.querySelectorAll('li').forEach((el) => {
         let id = el.dataset.id.trim();
         document.querySelector(`.product-card[data-id="${id}"]`).querySelector('.fav-star').classList.add('_active')
 })
+
 }
 
 const deleteProduct = (productParent) =>{
@@ -89,7 +90,7 @@ if (favButton) {
         favButton.classList.toggle('_active');
         favBlock.classList.toggle('_active');
         hideText();
-        innitionalState();
+        initionalState();
     });
 };
 
@@ -180,12 +181,12 @@ favStar.forEach(function (elem){
     
 
 })
-document.addEventListener('click', (e) =>{
-
-    const withinBoundaries = e.composedPath().includes(popup);
-
-    if ( ! withinBoundaries ) {
-		popup.style.opacity = '0'; // скрываем элемент т к клик был за его пределами
-	}
-});
+//document.addEventListener('click', (e) =>{
+//
+//    const withinBoundaries = e.composedPath().includes(popup);
+//
+//    if ( ! withinBoundaries ) {
+//		popup.style.opacity = '0'; // скрываем элемент т к клик был за его пределами
+//	}
+//});
 initionalState();
