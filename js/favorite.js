@@ -28,7 +28,7 @@ const generateCartProduct = (img, title, litr, id) => {
        <div class="ml-block fav-ml-block"><span> ${litr} </span></div>
       </div>
       <div class="del">
-      <img src="/img/icons/Del2.png" alt="">
+      <img src="../img/icons/Del2.png" alt="">
      </div>
     </div>
     </li>`
