@@ -28,7 +28,7 @@ const generateCartProduct = (img, title, litr, id) => {
        <div class="ml-block fav-ml-block"><span> ${litr} </span></div>
       </div>
       <div class="del">
-      <img src="../img/icons/Del2.png" alt="">
+      <img class="del-img" src="./img/icons/Del2.png" alt="">
      </div>
     </div>
     </li>`
@@ -62,7 +62,7 @@ const updateStorage = () =>{
 const initionalState = () =>{
     favList.innerHTML = localStorage.getItem('products');
     favListMob.innerHTML = localStorage.getItem('products');
-    console.log( favList);
+    
     hideText();
     favList.querySelectorAll('li').forEach((el) => {
         let id = el.dataset.id.trim();
@@ -83,6 +83,7 @@ const deleteProduct = (productParent) =>{
     favLists.forEach((e) =>{
         e.querySelector(`li[data-id="${id}"]`).remove();
  })
+ delEffect();
 }
 
 if (favButton) {
@@ -97,6 +98,21 @@ if (favButton) {
 mobFavBtn.addEventListener("click", function(){
     updateStorage();
     popupActive();
+
+    
+if(popup.classList.contains('active')){
+    document.addEventListener('click', (e) =>{
+        
+        const withinBoundaries = e.composedPath().includes(popupBody);
+        const withinFavStar = e.composedPath().includes(mobFavBtn);
+        
+        if ((withinBoundaries || withinFavStar) == false ) {
+            
+            popup.classList.remove('active') 
+            popupBody.classList.remove('active') 
+        }
+    });
+};
 }) ;
 
 function delPush() {
@@ -144,25 +160,27 @@ favStar.forEach(function (elem){
         if(sumId !== id){
              favList.insertAdjacentHTML('beforeend', generateCartProduct(img, title, litr,  id));
              favListMob.insertAdjacentHTML('beforeend', generateCartProduct(img, title, litr,  id));
-        }
+             pushEffect();
+            }
         hideText();
         updateStorage();
-        pushEffect();
+        
         setTimeout(delPush, 800);
     })
 
     favList.addEventListener('click', (e) => {
        
-        if(e.target.classList.contains('del')){
+        if(e.target.classList.contains('del-img')){
             deleteProduct(e.target.closest('li').dataset.id);
+           
         }
-        delEffect();
+        
         setTimeout(delDel, 800);
         hideText();
         updateStorage();
     })
     favListMob.addEventListener('click', (e) => {
-        if(e.target.classList.contains('del')){
+        if(e.target.classList.contains('del-img')){
             deleteProduct(e.target.closest('li').dataset.id);
         }
        
@@ -173,20 +191,13 @@ favStar.forEach(function (elem){
                 mobFavBtn.classList.remove('starlight');
             }, 600); 
         }
-        delEffect();
+        
         setTimeout(delDel, 800);
         hideText();
         updateStorage();
     })
     
 
-})
-//document.addEventListener('click', (e) =>{
-//
-//    const withinBoundaries = e.composedPath().includes(popup);
-//
-//    if ( ! withinBoundaries ) {
-//		popup.style.opacity = '0'; // скрываем элемент т к клик был за его пределами
-//	}
-//});
+});
+
 initionalState();
