@@ -28,7 +28,7 @@ const generateCartProduct = (img, title, litr, id) => {
        <div class="ml-block fav-ml-block"><span> ${litr} </span></div>
       </div>
       <div class="del">
-.
+      
      </div>
     </div>
     </li>`
@@ -66,8 +66,7 @@ const initionalState = () =>{
     hideText();
     favList.querySelectorAll('li').forEach(el => {
         let id = el.dataset.id.trim();
-        document.querySelector(`.product-card[data-id="${id}"]`)
-        .querySelector('.fav-star').classList.add('_active')
+        document.querySelector(`.product-card[data-id="${id}"]`).querySelector('.fav-star').classList.add('_active')
 })
 }
 
@@ -181,4 +180,12 @@ favStar.forEach(function (elem){
     
 
 })
+document.addEventListener('click', (e) =>{
+
+    const withinBoundaries = e.composedPath().includes(popup);
+
+    if ( ! withinBoundaries ) {
+		popup.style.opacity = '0'; // скрываем элемент т к клик был за его пределами
+	}
+});
 initionalState();
