@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
   }
 }
-@-webkit-keyframes mob-del-starlight {
+@-webkit-keyframes mob- -starlight {
   50% {
     background-size: 0%;
   }
@@ -437,7 +437,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .del {
   cursor: pointer;
-  background-image: url(/img/icons/Del2.png);
+  background-image: url(../img/icons/Del2.png);
   background-repeat: no-repeat;
   background-size: contain;
   margin: -65px -15px 0px 0px;
