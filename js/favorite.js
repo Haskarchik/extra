@@ -92,6 +92,34 @@ if (favButton) {
         favBlock.classList.toggle('_active');
         hideText();
         initionalState();
+
+        if(favBlock.classList.contains('_active')){
+            
+            document.addEventListener('click', (e) =>{
+              
+                
+                
+                const withinBoundaries = e.composedPath().includes(favBlock);
+                const withinFavBtn = e.composedPath().includes(favButton);
+                let haveStar = e.composedPath();
+                 let  starHas = Boolean(false)
+               
+                    if(haveStar[1].classList.contains('fav-star')){
+                        starHas = true;
+                    }
+           
+                if ((withinBoundaries || withinFavBtn || starHas) == false ) {
+                   
+                    favBlock.classList.remove('_active') 
+                    
+                }
+               
+                
+                
+                
+                
+            });
+        };
     });
 };
 
@@ -114,6 +142,7 @@ if(popup.classList.contains('active')){
     });
 };
 }) ;
+
 
 function delPush() {
     favButton.classList.remove('push');
