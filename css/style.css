@@ -1255,9 +1255,9 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     padding: 0px 5px;
   }
-  .header-row img {
-    height: 30px;
-    width: 30px;
+  .header-row a img {
+    height: 40px;
+    width: 40px;
   }
 
   .header-nav {
@@ -1266,7 +1266,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .nav {
-    font-size: 11px;
+    font-size: 13px;
     line-height: 13px;
     margin: 0px 10px;
   }
@@ -1396,7 +1396,7 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 100%;
     position: -webkit-sticky;
     position: sticky;
-    top: 58px;
+    top: 49px;
     z-index: 3;
     background-color: #FFFFFF;
     width: 100%;

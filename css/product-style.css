@@ -747,6 +747,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /************************************/
+.popup {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .popup {
     position: fixed;
@@ -804,8 +808,8 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
   }
   .header-row img {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
   }
 
   .header-nav {
@@ -814,7 +818,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .nav {
-    font-size: 11px;
+    font-size: 13px;
     line-height: 13px;
     margin: 0px 10px;
   }

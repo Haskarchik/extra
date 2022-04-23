@@ -1227,17 +1227,19 @@ a:hover{
   justify-content: space-between;
   position: relative;
   padding: 0px 5px;
+  a{
   img{
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
   }
+}
 }
 .header-nav{
   display: flex;
   align-items: center;
 }
 .nav{
-  font-size: 11px;
+  font-size: 13px;
   line-height: 13px;
   margin: 0px 10px;
 }
@@ -1364,7 +1366,7 @@ li:first-child._active::before{
     max-width: 100%;
    
     position: sticky;
-    top: 58px;
+    top: 49px;
     z-index: 3;
     background-color: #FFFFFF;
     width: 100%;
