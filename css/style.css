@@ -1293,9 +1293,9 @@ h1, h2, h3, h4, h5, h6 {
 
   .fav-card {
     border-bottom: solid 0.5px black;
-    padding: 10px 0px;
+    padding: 10px 0px 13px;
     width: 250px;
-    height: 90px;
+    height: 100px;
     align-items: center;
   }
   .fav-card img {
@@ -1315,7 +1315,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .fav-label {
-    height: 50px;
+    height: 60px;
     font-size: 15px;
   }
   .fav-label div {

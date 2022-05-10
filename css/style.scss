@@ -1271,9 +1271,9 @@ li:first-child._active::before{
 
   .fav-card {
     border-bottom: solid 0.5px black;
-    padding: 10px 0px;
+    padding: 10px 0px 13px;
     width: 250px;
-    height: 90px;
+    height: 100px;
     align-items: center;
 
     img {
@@ -1296,7 +1296,7 @@ li:first-child._active::before{
    
 }
   .fav-label {
-    height: 50px;
+    height: 60px;
     font-size: 15px;
     div{ width: 170px;
   }
