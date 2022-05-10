@@ -212,6 +212,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav {
+  position: relative;
   margin: 0px 40px;
   align-self: center;
   font-family: "Roboto";
@@ -301,12 +302,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fav-block {
+  position: absolute;
   z-index: 2;
-  top: 70px;
-  left: 100px;
+  top: 60px;
+  left: 90px;
   display: none;
   opacity: 0;
-  position: absolute;
   height: 260px;
   width: 425px;
   background-color: #ECFCE9;

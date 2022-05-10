@@ -199,6 +199,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .nav {
+  position: relative;
     margin: 0px 40px;
     align-self: center;
     font-family: 'Roboto';
@@ -275,12 +276,13 @@ left: 128px;
   }
 
   .fav-block {
+    position: absolute;
     z-index: 2;
-    top: 70px;
-    left:100px;
+    top: 60px;
+    left: 90px;
     display:none;
     opacity: 0;
-    position: absolute;
+    
     height: 260px;
     width: 425px;
     background-color: #ECFCE9;
@@ -775,11 +777,13 @@ left: 128px;
   align-items: center;
 }
 .nav{
+  
   font-size: 13px;
   line-height: 13px;
   margin: 0px 10px;
 }
 .nav-list {
+  
   li{
       margin: 0px 5px;
       
