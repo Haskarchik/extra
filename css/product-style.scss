@@ -993,7 +993,8 @@ li:first-child._active::before{
   
 }
 .fav-star{
-  
+  display: none;
+  position: absolute;
   img{
     
     height: 40px;
@@ -1083,7 +1084,7 @@ li:first-child._active::before{
     }
   }
   .fav-star{
-    display: inline-block;
+   
     left: 260px;
     
   }
