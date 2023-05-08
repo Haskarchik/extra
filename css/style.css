@@ -72,14 +72,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /************************************/
-@-webkit-keyframes wow-efect {
-  0% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-}
 @keyframes wow-efect {
   0% {
     opacity: 0.6;
@@ -88,22 +80,9 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
   }
 }
-@-webkit-keyframes mob-del-starlight {
-  50% {
-    background-size: 0%;
-  }
-}
 @keyframes mob-del-starlight {
   50% {
     background-size: 0%;
-  }
-}
-@-webkit-keyframes mob-push {
-  40% {
-    margin-top: -10px;
-  }
-  70% {
-    margin-top: 5px;
   }
 }
 @keyframes mob-push {
@@ -114,23 +93,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 5px;
   }
 }
-@-webkit-keyframes push {
-  50% {
-    top: 5px;
-    height: 2px;
-    background-color: red;
-  }
-}
 @keyframes push {
   50% {
     top: 5px;
-    height: 2px;
-    background-color: red;
-  }
-}
-@-webkit-keyframes del {
-  50% {
-    top: 25px;
     height: 2px;
     background-color: red;
   }
@@ -142,15 +107,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: red;
   }
 }
-@-webkit-keyframes biger {
-  50% {
-    padding: 15px 25px;
-    font-size: 30px;
-  }
-  100% {
-    padding: 10px 15px;
-  }
-}
 @keyframes biger {
   50% {
     padding: 15px 25px;
@@ -160,19 +116,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px 15px;
   }
 }
-@-webkit-keyframes first-part-img {
-  0% {
-    opacity: 0.1;
-    left: 500px;
-  }
-}
 @keyframes first-part-img {
-  0% {
-    opacity: 0.1;
-    left: 500px;
-  }
-}
-@-webkit-keyframes second-part-img {
   0% {
     opacity: 0.1;
     left: 500px;
@@ -182,16 +126,6 @@ h1, h2, h3, h4, h5, h6 {
   0% {
     opacity: 0.1;
     left: 500px;
-  }
-}
-@-webkit-keyframes advertising-down-img {
-  0% {
-    opacity: 0.1;
-    left: 270px;
-  }
-  100% {
-    opacity: 1;
-    left: 58%;
   }
 }
 @keyframes advertising-down-img {
@@ -225,7 +159,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
-  position: -webkit-sticky;
   position: sticky;
   width: 100%;
   top: -1px;
@@ -281,7 +214,6 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .nav-list li:first-child::before {
@@ -326,17 +258,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fav-button.push::before, .fav-button.push::after {
-  -webkit-animation-name: push;
-          animation-name: push;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
+  animation-name: push;
+  animation-duration: 0.8s;
 }
 
 .fav-button.del-efect::before, .fav-button.del-efect::after {
-  -webkit-animation-name: del;
-          animation-name: del;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
+  animation-name: del;
+  animation-duration: 0.8s;
 }
 
 .fav-button::before, .fav-button::after {
@@ -424,7 +352,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   transition-duration: 0.1s;
   border-bottom: solid 0.5px black;
-  padding-bottom: 10px;
+  padding: 25px 10px 25px 0px;
   width: 370px;
   align-items: center;
 }
@@ -646,20 +574,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .swiper-slide-active a {
-  -webkit-animation-name: wow-efect;
-          animation-name: wow-efect;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-name: wow-efect;
+  animation-delay: 3s;
+  animation-duration: 2s;
 }
 .swiper-slide-active span {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-  -webkit-animation-name: biger;
-          animation-name: biger;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-delay: 1.5s;
+  animation-name: biger;
+  animation-duration: 2s;
 }
 .swiper-slide-active img {
   top: 170px;
@@ -1145,18 +1067,15 @@ h1, h2, h3, h4, h5, h6 {
   .container {
     max-width: 1000px;
   }
-
   .header-row a img {
     height: 50px;
     width: 50px;
   }
-
   .nav {
     margin: 0px 50px 0px 20px;
     font-size: 20px;
     line-height: 24px;
   }
-
   .tel img {
     height: 25px;
     width: 25px;
@@ -1165,35 +1084,28 @@ h1, h2, h3, h4, h5, h6 {
   .tel a {
     font-size: 20px;
   }
-
   .location img {
     height: 25px;
     width: 25px;
   }
-
   .street {
     font-size: 22px;
     line-height: 24px;
   }
-
   .nav-list li:first-child::before {
     top: 38px;
     width: 85px;
   }
-
   .fav-button::before {
     left: 85px;
   }
-
   .fav-button::after {
     left: 78px;
   }
-
   .languages {
     font-size: 22px;
     line-height: 24px;
   }
-
   .advesting-up {
     max-width: 1020px;
     overflow: hidden;
@@ -1209,17 +1121,14 @@ h1, h2, h3, h4, h5, h6 {
     transition-duration: 0.5s;
     opacity: 0;
   }
-
   .popup.active {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5960784314);
     opacity: 1;
   }
-
   .swiper {
     z-index: 0;
   }
-
   .popup-body {
     position: absolute;
     background-color: #ECFCE9;
@@ -1230,11 +1139,9 @@ h1, h2, h3, h4, h5, h6 {
     transition-duration: 0.5s;
     overflow: auto;
   }
-
   .popup-body.active {
     right: 0px;
   }
-
   .popup-content {
     margin-top: 90px;
     padding: 0px 5px;
@@ -1250,7 +1157,6 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 455px;
     overflow: hidden;
   }
-
   .header-row {
     justify-content: space-between;
     position: relative;
@@ -1260,18 +1166,15 @@ h1, h2, h3, h4, h5, h6 {
     height: 40px;
     width: 40px;
   }
-
   .header-nav {
     display: flex;
     align-items: center;
   }
-
   .nav {
     font-size: 13px;
     line-height: 13px;
     margin: 0px 10px;
   }
-
   .nav-list li {
     margin: 0px 5px;
   }
@@ -1291,10 +1194,9 @@ h1, h2, h3, h4, h5, h6 {
   .nav-list li:first-child._active::before {
     left: 50px;
   }
-
   .fav-card {
     border-bottom: solid 0.5px black;
-    padding: 10px 0px 13px;
+    padding: 10px 0px 20px;
     width: 250px;
     height: 100px;
     align-items: center;
@@ -1305,7 +1207,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 60px;
     max-width: 35px;
   }
-
   .del {
     cursor: pointer;
   }
@@ -1314,7 +1215,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 20px;
     width: 20px;
   }
-
   .fav-label {
     height: 60px;
     font-size: 15px;
@@ -1322,7 +1222,6 @@ h1, h2, h3, h4, h5, h6 {
   .fav-label div {
     width: 170px;
   }
-
   .fav-ml-block {
     margin-top: 5px;
   }
@@ -1337,15 +1236,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 3px 6px;
     border-radius: 7px;
   }
-
   #category {
     position: relative;
   }
-
   .fav-button {
     display: none;
   }
-
   .mobile-favorite {
     align-self: center;
     height: 20px;
@@ -1358,27 +1254,19 @@ h1, h2, h3, h4, h5, h6 {
     height: 20px;
     width: 20px;
   }
-
   .mobile-favorite.push {
-    -webkit-animation-name: mob-push;
-            animation-name: mob-push;
-    -webkit-animation-duration: 0.8s;
-            animation-duration: 0.8s;
+    animation-name: mob-push;
+    animation-duration: 0.8s;
   }
-
   .mobile-favorite.starlight.del-efect {
     background-size: 100%;
     background-position: center;
-    -webkit-animation-name: mob-del-starlight;
-            animation-name: mob-del-starlight;
-    -webkit-animation-duration: 0.8s;
-            animation-duration: 0.8s;
+    animation-name: mob-del-starlight;
+    animation-duration: 0.8s;
   }
-
   .mobile-favorite.starlight {
     background-image: url(../img/icons/active-star.png);
   }
-
   .header-contact {
     margin: 0px;
     display: flex;
@@ -1388,14 +1276,11 @@ h1, h2, h3, h4, h5, h6 {
   .header-contact a {
     font-size: 9px;
   }
-
   .mobile-header {
     display: none;
   }
-
   .mobile-header-active {
     max-width: 100%;
-    position: -webkit-sticky;
     position: sticky;
     top: 49px;
     z-index: 3;
@@ -1405,11 +1290,9 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
     padding: 0px 15px;
   }
-
   .mobile-category {
     display: block;
   }
-
   .tel {
     display: flex;
     align-items: center;
@@ -1421,12 +1304,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 10px;
     margin-right: 10px;
   }
-
   .tel::before {
     content: "";
     display: none;
   }
-
   .location {
     margin-right: 10px;
     display: flex;
@@ -1436,11 +1317,9 @@ h1, h2, h3, h4, h5, h6 {
     height: 10px;
     width: 10px;
   }
-
   .street {
     font-size: 9px;
   }
-
   .languages {
     font-size: 9px;
   }
@@ -1452,17 +1331,14 @@ h1, h2, h3, h4, h5, h6 {
     height: 23px;
     left: 20px;
   }
-
   /************************************/
   .content {
     margin: 15px 0px;
   }
-
   .swiper-slide2 {
     background-size: 100% 100%;
     background-image: url(../img/toilet-mob.jpg);
   }
-
   .swiper-slide4 {
     display: block;
     background-size: 100% 100%;
@@ -1472,7 +1348,6 @@ h1, h2, h3, h4, h5, h6 {
     width: 60px;
     margin: 0px;
   }
-
   .swiper-slide5 {
     display: block;
     background-position: 0px;
@@ -1483,20 +1358,16 @@ h1, h2, h3, h4, h5, h6 {
     width: 60px;
     margin: 0px;
   }
-
   .advesting-down {
     display: none;
   }
-
   .swiper {
     height: 140px;
     width: 240px;
   }
-
   .column-more {
     margin-top: 25px;
   }
-
   .swiper-slide {
     display: flex;
     justify-content: space-between;
@@ -1521,43 +1392,34 @@ h1, h2, h3, h4, h5, h6 {
     top: 0px;
     left: 0px;
   }
-
   .swiper-slide-active a {
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
+    animation-duration: 5s;
   }
   .swiper-slide-active span {
-    -webkit-animation-name: none;
-            animation-name: none;
+    animation-name: none;
   }
   .swiper-slide-active img {
     top: 5px;
     left: 130px;
     opacity: 1;
   }
-
   .swiper-slide2.swiper-slide-active img {
     top: 0px;
     left: 150px;
   }
-
   .swiper-slide1.swiper-slide-active img {
     height: 135px;
     left: 150px;
   }
-
   .swiper-slide4.swiper-slide-active img {
     left: 170px;
   }
-
   .swiper-button img {
     display: none;
   }
-
   .advesting-column {
     display: none;
   }
-
   .advesting-column-top {
     height: 140px;
     width: 240px;
@@ -1578,12 +1440,10 @@ h1, h2, h3, h4, h5, h6 {
     height: 130px;
     width: 60px;
   }
-
   .advesting-swiper {
     width: 100%;
     margin-right: 0px;
   }
-
   .advesting-colmun-down {
     height: 140px;
     width: 240px;
@@ -1604,13 +1464,11 @@ h1, h2, h3, h4, h5, h6 {
     height: 110px;
     width: 80px;
   }
-
   /************************************/
   .products {
     margin-top: 15px;
     background-color: #FFFFFF;
   }
-
   .products-label {
     position: relative;
     padding: 10px;
@@ -1618,7 +1476,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 11px;
     margin-bottom: 0px;
   }
-
   .products-label::after {
     content: "";
     position: absolute;
@@ -1628,11 +1485,9 @@ h1, h2, h3, h4, h5, h6 {
     top: 40px;
     left: 0px;
   }
-
   .mob-hide {
     display: none;
   }
-
   .category-mobile {
     color: white;
     font-family: "Roboto";
@@ -1640,20 +1495,17 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 9px;
     line-height: 11px;
   }
-
   .category-mobile-block {
     position: relative;
     display: block;
     background-color: white;
     padding: 10px 0px 10px 10px;
   }
-
   .mobile-header-active-label {
     font-family: "Roboto";
     font-size: 9px;
     line-height: 11px;
   }
-
   .mobile-header-active-label::after {
     content: "";
     position: absolute;
@@ -1663,7 +1515,6 @@ h1, h2, h3, h4, h5, h6 {
     top: 35px;
     left: 0px;
   }
-
   .category-list-mobile {
     font-size: 9px;
     text-align: left;
@@ -1683,15 +1534,12 @@ h1, h2, h3, h4, h5, h6 {
   .category-list-mobile li._active {
     background-color: #E01FA9;
   }
-
   .products-items img {
     display: none;
   }
-
   .search-box {
     display: none;
   }
-
   .product-card {
     padding: 10px 0px 0px 0px;
     border-radius: 0px;
@@ -1705,14 +1553,12 @@ h1, h2, h3, h4, h5, h6 {
     height: 100px;
     max-width: 90px;
   }
-
   .card-label {
     position: absolute;
     padding: 15px 5px 0px;
     font-size: 9px;
     top: 100px;
   }
-
   .card-items {
     padding: 7px;
     margin: 0px;
@@ -1727,31 +1573,25 @@ h1, h2, h3, h4, h5, h6 {
     padding: 3px 5px;
     margin: 0px;
   }
-
   /************************************/
   .footer {
     font-size: 9px;
     padding: 15px 10px;
   }
-
   .footer-row {
     justify-content: start;
   }
-
   .footer-contacts {
     width: 140px;
     margin-right: 20px;
   }
-
   .contacts-label {
     margin-bottom: 10px;
   }
-
   .footer-left-column img {
     margin-right: 10px;
     height: 30px;
   }
-
   .footer-more-inf {
     margin-bottom: 10px;
   }

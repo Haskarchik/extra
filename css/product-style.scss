@@ -327,7 +327,8 @@ left: 128px;
     transition-duration: 0.1s;
     
     border-bottom: solid 0.5px black;
-    padding-bottom: 10px;
+    padding: 25px 10px 25px 0px;
+
     width: 370px;
     align-items: center;
 
@@ -863,7 +864,7 @@ li:first-child._active::before{
   }
   .fav-card {
     border-bottom: solid 0.5px black;
-    padding: 10px 0px 13px;
+    padding: 10px 0px 20px;
     width: 250px;
     height: 100px;
     align-items: center;
