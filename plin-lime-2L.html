@@ -84,7 +84,7 @@
                     <li>
                       <a href="/bilizna.html">
                         <div class="fav-card">
-                          <img src="./img/bilizna ex.png" alt="" />
+                          <img src="./img/bilizna_ex.png" alt="" />
                           <div class="fav-label">
                             Білизна <span>500 мл</span>
                           </div>
@@ -605,7 +605,7 @@
                     <a href="./bilizna.html"> Білизна </a>
                   </div>
                   <a href="./bilizna.html"
-                    ><img src="./img/bilizna ex.png" alt=""
+                    ><img src="./img/bilizna_ex.png" alt=""
                   /></a>
                   <div class="card-items">
                     <div class="ml-block"><span> 950 мл</span></div>
@@ -728,7 +728,17 @@
             </div>
             <div class="product-main-info">
               <div class="product-first-info">
-                <img src="./img/soap-limon-2L.png" alt="" />
+    
+                <img
+                  src="./img/soap-limon-2L.png"
+                  onmousemove="zoom(event)"
+                  alt=""
+                />
+                <figure
+                  style="background-image: url(./img/soap-limon-2L.png)"
+                  onmousemove="zoom(event)"
+                  onmouseleave="switchOnOpacity()"
+                ></figure>
                 <div class="main-info">
                   <div class="info-label">
                     <span> Засіб для миття посуду з екстрактом Лимона</span>
@@ -787,5 +797,21 @@
       </div>
     </div>
     <script src="./js/favorite.js"></script>
+    <script>
+      const image = document.querySelector(".product-first-info");
+      function zoom(e) {
+        console.log();
+        image.children[0].style.opacity = "0";
+        var zoomer = e.currentTarget;
+        e.offsetX ? (offsetX = e.offsetX) : (offsetX = e.touches[0].pageX);
+        e.offsetY ? (offsetY = e.offsetY) : (offsetX = e.touches[0].pageX);
+        x = (offsetX / zoomer.offsetWidth) * 100;
+        y = (offsetY / zoomer.offsetHeight) * 100;
+        zoomer.style.backgroundPosition = x + "% " + y + "%";
+      }
+      function switchOnOpacity() {
+        image.children[0].style.opacity = "1";
+      }
+    </script>
   </body>
 </html>
