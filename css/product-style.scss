@@ -783,6 +783,7 @@ figure {
     opacity: 0;
     &:hover{
       opacity: 1;
+      height: 450px;
     }
     & img:hover {
       opacity: 0;
@@ -799,7 +800,7 @@ figure {
     left: 40px;
     overflow: hidden;
     cursor: zoom-in;
-    height: 450px;
+    height: 250px;
     width: 200px;
   }
 }

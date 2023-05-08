@@ -777,11 +777,12 @@ figure img {
     left: 40px;
     overflow: hidden;
     cursor: zoom-in;
-    height: 450px;
+    height: 250px;
     width: 200px;
   }
   figure:hover {
     opacity: 1;
+    height: 450px;
   }
   figure img:hover {
     opacity: 0;
